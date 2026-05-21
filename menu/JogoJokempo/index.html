@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Pedra Papel Tesoura</title>
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <div class="container">
+<button id="btn-voltar">Voltar</button>
+    <h1> PEDRA PAPEL TESOURA </h1>
+
+    <!-- RANKING -->
+    <div class="ranking">
+
+      <div class="placar">
+         VOCÊ:
+        <span id="pontosJogador">0</span>
+      </div>
+
+      <div class="placar">
+         MÁQUINA:
+        <span id="pontosMaquina">0</span>
+      </div>
+
+      <div class="placar">
+         EMPATES:
+        <span id="empates">0</span>
+      </div>
+
+    </div>
+
+    <div class="arena">
+
+      <!-- JOGADOR -->
+      <div class="player">
+
+        <h2>VOCÊ</h2>
+
+        <!-- IMAGEM INICIAL -->
+        <img id="mao1"
+          src="https://cdn-icons-png.flaticon.com/512/32/32339.png">
+
+        <div class="botoes">
+
+          <button onclick="jogar('pedra')">
+            ✊
+          </button>
+
+          <button onclick="jogar('papel')">
+            ✋
+          </button>
+
+          <button onclick="jogar('tesoura')">
+            ✌
+          </button>
+
+        </div>
+
+      </div>
+
+      <div class="vs">VS</div>
+
+      <!-- MÁQUINA -->
+      <div class="player">
+
+        <h2>MÁQUINA</h2>
+
+        <!-- IMAGEM INICIAL -->
+        <img id="mao2"
+          src="https://cdn-icons-png.flaticon.com/512/32/32339.png">
+
+      </div>
+
+    </div>
+
+    <div id="resultado">
+      Escolha sua jogada!
+    </div>
+
+    <div class="acoes">
+
+      <button class="reinicio"
+        onclick="reiniciar()">
+
+        Reiniciar
+
+      </button>
+
+      <button class="proxima"
+        onclick="proximaRodada()">
+
+        Próxima Rodada
+
+      </button>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

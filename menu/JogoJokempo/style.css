@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   BODY
+========================= */
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-family: 'Press Start 2P', cursive;
+  background: linear-gradient(135deg, #ffffff, #646464, #ffffff, #1a1a1a);
+  color: white;
+  overflow-x: hidden;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+.container {
+  width: 100%;
+  max-width: 1000px;
+  text-align: center;
+  background: rgba(0,0,0,0.75);
+  padding: 35px 25px;
+  border-radius: 20px;
+  border: 4px solid rgb(0, 0, 0);
+  box-shadow: 0 0 20px rgb(255, 18, 18);
+}
+
+/* =========================
+   HEADER (TÍTULO + BOTÃO)
+========================= */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.header h1 {
+  color: rgb(126, 126, 126);
+  font-size: clamp(20px, 4vw, 36px);
+  line-height: 1.5;
+  text-shadow: 3px 3px 0 #000, 5px 5px 0 #555;
+  margin: 0;
+}
+
+#btn-voltar {
+  padding: 10px 15px;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 5px;
+  background: rgb(255, 6, 6);
+  color: rgb(255, 255, 255);
+  font-family: 'Press Start 2P', cursive;
+  font-size: 9px;
+  cursor: pointer;
+  box-shadow: 1px 1px 0 #241b1b, 2px 2px 0 #a3a1a1;
+  transform: translateY(-20px); /* puxado mais para cima */
+}
+
+#btn-voltar:hover {
+  background: rgb(163, 163, 163);
+  color: white;
+}
+
+/* =========================
+   RANKING
+========================= */
+.ranking {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;     
+  margin-bottom: 35px;  
+}
+
+
+.placar {
+  background: rgba(255,255,255,0.1);
+  padding: 15px 20px;
+  border-radius: 12px;
+  border: 2px solid rgb(0, 0, 0);
+  font-size: 12px;
+  line-height: 1.6;
+  color: #ffe600;
+}
+
+/* =========================
+   ARENA
+========================= */
+.arena {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+/* =========================
+   PLAYERS
+========================= */
+.player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.player h2 {
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgb(255, 0, 0);
+}
+
+.player img {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+  margin: 20px 0;
+  animation: idle 2s infinite ease-in-out;
+}
+
+/* =========================
+   ANIMAÇÃO IDLE
+========================= */
+@keyframes idle {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/* =========================
+   BOTÕES ESCOLHA
+========================= */
+.botoes {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+button {
+  width: 75px;
+  height: 75px;
+  border: none;
+  border-radius: 15px;
+  font-size: 30px;
+  cursor: pointer;
+  transition: 0.2s;
+  background: rgb(82, 82, 82);
+  border: #000 1px solid;
+}
+
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgb(255, 81, 0);
+}
+
+/* =========================
+   VS
+========================= */
+.vs {
+  font-size: 40px;
+  color: rgb(255, 6, 6);
+  text-shadow: 2px 2px 0 black;
+}
+
+/* =========================
+   RESULTADO
+========================= */
+#resultado {
+  margin-top: 40px;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #ffe600;
+}
+
+/* =========================
+   SHAKE
+========================= */
+.animar {
+  animation: shake 0.5s infinite;
+}
+
+@keyframes shake {
+  0% { transform: translateY(0); }
+  25% { transform: translateY(-20px); }
+  50% { transform: translateY(0); }
+  75% { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
+
+/* =========================
+   AÇÕES
+========================= */
+.acoes {
+  margin-top: 35px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.reinicio,
+.proxima {
+  padding: 15px 25px;
+  border: none;
+  border-radius: 10px;
+  color: rgb(0, 0, 0);
+  font-family: 'Press Start 2P', cursive;
+  font-size: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+  width: 230px;
+  border: 2px solid black;
+}
+
+.reinicio { background: #ff0000; }
+.proxima { background: #ffd900; }
+
+/* =========================
+   RESPONSIVO TABLET
+========================= */
+@media (max-width: 768px) {
+  body { padding: 15px; }
+  .container { padding: 30px 15px; }
+  .arena { flex-direction: column; gap: 25px; }
+  .header h1 { font-size: 22px; line-height: 1.7; }
+  .player h2 { font-size: 11px; }
+  .player img { width: 140px; height: 140px; }
+  .placar { font-size: 10px; padding: 12px; }
+  .vs { font-size: 28px; }
+  #resultado { font-size: 13px; line-height: 2; }
+  button { width: 65px; height: 65px; font-size: 24px; }
+  .reinicio, .proxima { width: 90%; max-width: 300px; font-size: 9px; }
+  #btn-voltar { font-size: 8px; padding: 8px 12px; transform: translateY(-18px); }
+}
+
+/* =========================
+   RESPONSIVO CELULAR
+========================= */
+@media (max-width: 480px) {
+  .container { padding: 25px 10px; border-radius: 15px; }
+  .header { flex-direction: column; gap: 10px; align-items: center; }
+  .header h1 { font-size: 18px; margin-bottom: 5px; text-align: center; }
+  .ranking { gap: 12px; }
+  .placar { width: 100%; font-size: 8px; line-height: 1.8; }
+  .player h2 { font-size: 9px; }
+  .player img { width: 110px; height: 110px; }
+  .botoes { gap: 8px; }
+  button { width: 55px; height: 55px; font-size: 20px; }
+  .vs { font-size: 22px; }
+  #resultado { font-size: 10px; line-height: 2; }
+  .reinicio, .proxima { width: 100%; font-size: 8px; padding: 14px 10px; }
+  #btn-voltar { font-size: 7px; padding: 8px 10px; width: auto; max-width: 150px; transform: translateY(-25px); }
+}

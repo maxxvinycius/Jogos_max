@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+  margin: 0;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  text-align: center;
+  color: rgb(255, 255, 255);
+background: linear-gradient(to right, rgb(14, 14, 19), rgb(104, 104, 104));
+  font-family: 'Press Start 2P', cursive;
+}
+
+.container {
+  background: rgba(0, 0, 0, 0.7);
+
+  padding: 30px;
+
+  border-radius: 20px;
+
+  border: 3px solid rgb(25, 0, 255);
+
+  width: 80%;
+  max-width: 500px;
+
+  box-shadow: 0 0 20px black;
+}
+
+h1 {
+  color: yellow;
+
+  font-family: 'Press Start 2P', cursive;
+
+  text-shadow:
+    2px 2px 0 #000,
+    4px 4px 0 #555;
+
+  font-size: clamp(18px, 4vw, 32px);
+}
+
+p {
+  font-size: clamp(10px, 2vw, 14px);
+
+  line-height: 1.8;
+
+  font-family: 'Press Start 2P', cursive;
+}
+
+input {
+  margin-top: 20px;
+
+  padding: 12px;
+
+  width: 80%;
+
+  border: 2px solid gold;
+  border-radius: 10px;
+
+  text-align: center;
+
+  font-size: 18px;
+
+  outline: none;
+
+  font-family: 'Press Start 2P', cursive;
+}
+
+button {
+  margin-top: 20px;
+
+  padding: 12px 20px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: gold;
+  color: black;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+
+  font-family: 'Press Start 2P', cursive;
+
+  font-size: 10px;
+}
+
+button:hover {
+  transform: scale(1.05);
+
+  box-shadow: 0 0 10px yellow;
+}
+
+#mensagem {
+  margin-top: 20px;
+
+  font-size: 14px;
+
+  color: #00ff99;
+
+  font-family: 'Press Start 2P', cursive;
+}
+
+#tentativas {
+  margin-top: 15px;
+
+  color: orange;
+
+  font-size: 12px;
+
+  font-family: 'Press Start 2P', cursive;
+}
+
+@media (max-width: 600px) {
+
+  .container {
+    padding: 20px;
+  }
+
+  input {
+    width: 90%;
+  }
+
+  button {
+    width: 90%;
+    font-size: 9px;
+  }
+}
+footer p {
+    margin-top: 30px;
+    font-family: 'Press Start 2P', cursive;
+    color: rgb(255, 208, 0);
+    font-size: 12px;
+    text-shadow:
+        2px 2px 0 #000,
+        4px 4px 0 #555;
+}
+#btn-voltar {
+  position: absolute;
+  top: -5px;
+  left: 20px;
+
+  padding: 10px 15px;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: px;
+
+  background: rgb(255, 209, 6);
+  color: rgb(0, 0, 0);
+
+  font-family: 'Press Start 2P', cursive;
+  font-size: 10px;
+
+  cursor: pointer;
+  box-shadow:  1px 1px 0 #241b1b,
+    2px 2px 0 #a3a1a1;;
+}
+#btn-voltar:hover {
+  background: rgb(0, 4, 241);
+  color: rgb(255, 255, 255);
+}

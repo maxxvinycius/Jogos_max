@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+  text-align: center;
+
+  font-family: 'Press Start 2P', cursive;
+
+  background-image:
+    url("https://images6.alphacoders.com/705/thumb-1920-705836.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  min-height: 100vh;
+
+  padding: 20px;
+
+  overflow-x: hidden;
+}
+
+
+/* =========================
+   TÍTULO
+========================= */
+
+.titulo {
+  color: yellow;
+
+  text-shadow:
+    2px 2px 0 #241b1b,
+    4px 4px 0 #a3a1a1;
+
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  font-size: clamp(18px, 4vw, 40px);
+
+  line-height: 1.6;
+}
+
+
+/* =========================
+   TABULEIRO
+========================= */
+
+.tabuleiro {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(85px, 110px));
+
+  grid-template-rows:
+    repeat(3, minmax(85px, 110px));
+
+  gap: 12px;
+
+  justify-content: center;
+
+  margin-top: 40px;
+}
+
+
+/* =========================
+   CÉLULAS
+========================= */
+
+.celula {
+
+  width: 100%;
+
+  aspect-ratio: 1 / 1;
+
+  background: #35270063;
+
+  border: 3px solid #181200;
+
+  box-shadow:
+    2px 2px 0 #000;
+
+  font-size: clamp(25px, 5vw, 40px);
+
+  color: #a58c00;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.celula:hover {
+
+  transform: scale(1.05);
+
+  box-shadow:
+    0 0 12px #ffd000;
+}
+
+
+/* =========================
+   BOTÃO RESET
+========================= */
+
+#reset {
+
+  margin-top: 35px;
+
+  padding: 14px 22px;
+
+  font-family: 'Press Start 2P', cursive;
+
+  font-size: clamp(10px, 2vw, 14px);
+
+  background:
+    rgba(165, 42, 42, 0.7);
+
+  border: 2px solid black;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+#reset:hover {
+
+  transform: scale(1.05);
+
+  box-shadow:
+    0 0 10px brown;
+}
+
+
+/* =========================
+   COMO JOGAR
+========================= */
+
+#como-jogar {
+
+  margin-top: 45px;
+
+  color: #ffee00;
+
+  text-shadow:
+    2px 2px 0 #241b1b,
+    4px 4px 0 #a3a1a1;
+
+  font-size:
+    clamp(12px, 2vw, 18px);
+
+  line-height: 1.8;
+}
+
+
+/* =========================
+   TEXTO
+========================= */
+
+header p {
+
+  margin: 20px auto;
+
+  width: 90%;
+  max-width: 550px;
+
+  line-height: 2;
+
+  font-size:
+    clamp(10px, 2vw, 14px);
+
+  color: rgb(255, 255, 255);
+
+  text-shadow:
+    2px 2px 0 #241b1b,
+    4px 4px 0 #a3a1a1;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+  margin-top: 40px;
+
+  padding: 10px;
+}
+
+footer p {
+
+  font-family: 'Press Start 2P', cursive;
+
+  font-size:
+    clamp(8px, 1.5vw, 12px);
+
+  line-height: 1.8;
+
+  color: #020018;
+
+  text-shadow:
+    1px 1px 0 #241b1b,
+    2px 2px 0 #a3a1a1;
+}
+
+
+/* =========================
+   RESPONSIVO TABLET
+========================= */
+
+@media (max-width: 768px) {
+
+  body {
+
+    padding: 15px;
+  }
+
+  .titulo {
+
+    font-size: 22px;
+
+    line-height: 1.8;
+  }
+
+  .tabuleiro {
+
+    gap: 10px;
+
+    margin-top: 30px;
+
+    grid-template-columns:
+      repeat(3, minmax(75px, 95px));
+
+    grid-template-rows:
+      repeat(3, minmax(75px, 95px));
+  }
+
+  .celula {
+
+    font-size: 30px;
+  }
+
+  #reset {
+
+    width: 85%;
+
+    max-width: 300px;
+  }
+
+  header p {
+
+    width: 95%;
+
+    font-size: 11px;
+  }
+
+  #como-jogar {
+
+    font-size: 14px;
+  }
+}
+
+
+/* =========================
+   RESPONSIVO CELULAR
+========================= */
+
+@media (max-width: 480px) {
+
+  .titulo {
+
+    font-size: 15px;
+
+    margin-top: 15px;
+
+    line-height: 2;
+  }
+
+  .tabuleiro {
+
+    gap: 8px;
+
+    margin-top: 25px;
+
+    grid-template-columns:
+      repeat(3, minmax(65px, 85px));
+
+    grid-template-rows:
+      repeat(3, minmax(65px, 85px));
+  }
+
+  .celula {
+
+    font-size: 24px;
+  }
+
+  #reset {
+
+    width: 95%;
+
+    padding: 12px;
+
+    font-size: 9px;
+  }
+
+  #como-jogar {
+
+    margin-top: 35px;
+
+    font-size: 11px;
+
+    line-height: 2;
+  }
+
+  header p {
+
+    font-size: 9px;
+
+    line-height: 2.2;
+  }
+
+  footer p {
+
+    font-size: 7px;
+
+    line-height: 2;
+  }
+}
+#btn-voltar {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+
+  padding: 10px 15px;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 5px;
+
+  background: rgb(255, 209, 6);
+  color: rgb(0, 0, 0);
+
+  font-family: 'Press Start 2P', cursive;
+  font-size: 10px;
+
+  cursor: pointer;
+  box-shadow:  1px 1px 0 #241b1b,
+    2px 2px 0 #a3a1a1;;
+}
+#btn-voltar:hover {
+  background: rgb(241, 0, 0);
+  color: rgb(255, 255, 255);
+}
